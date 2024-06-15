@@ -5,6 +5,12 @@ on:
     branches: [ master ]
 
   workflow_dispatch:
+    push:
+      branches:
+        - master # master
+        - 'dev-*' # dev-new, dev-this-is-new
+        - 'hotfix/**' #hotfix/new hotfix/new/button
+        # branch developer-1 wouldn't start workflow
 
 jobs:
   build:
